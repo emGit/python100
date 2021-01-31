@@ -8,7 +8,7 @@ def start():
 def p0():
   print(constants.space)
   print(
-    "Day 1 - Python Print Function\n"
+    "Day 1 - Python Print Function!\n"
     "The function is declared like this:\n"
     "print('what to print')")
   print(constants.space)
