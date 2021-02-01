@@ -1,7 +1,8 @@
-# import sys
-# sys.path.append('../')
-
+import sys
 from jCode import jCode
+
+sys.path.append('../')
+
 from p3 import p3
 
 print("Python100!")
