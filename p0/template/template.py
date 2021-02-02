@@ -16,3 +16,5 @@ def p1():
 
 def p2():
   macro.moduleStart("BMI")
+
+start()

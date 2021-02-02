@@ -3,13 +3,13 @@ from jCode import jCode
 
 sys.path.append('../')
 
-from p3 import p3
+# from p3 import p3
 
 print("Python100!")
 print("Begin...")
 
 jCode.start()
-p3.start()
+# p3.start()
 
 def notes():
   #$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
