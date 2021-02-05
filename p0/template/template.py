@@ -6,15 +6,15 @@ def start():
   # p2()
 
 def p0():
-  macro.moduleStart("BMI Calculator")
+  macro.moduleStart("")
   height = float(input("enter your height in m: \n"))
   weight = float(input("enter your weight in kg: \n"))
   print(f"Your BMI is: {int(weight/height**2)}")
 
 def p1():
-  macro.moduleStart("BMI")
+  macro.moduleStart("")
 
 def p2():
-  macro.moduleStart("BMI")
+  macro.moduleStart("")
 
 start()
