@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 from util import macro
 
 def start():
@@ -38,7 +40,7 @@ def p1():
 def p2():
     macro.moduleStart("Calculator")
     from art import logo
-    from util.constants import space
+    from util.macro import cls
     def add(n1, n2): return n1 + n2
     def subtract(n1, n2): return n1 - n2
     def multiply(n1, n2): return n1 * n2
@@ -68,7 +70,8 @@ def p2():
                 num1 = answer
             else:
                 should_continue = False
-                print(space)
+                # print(space)
+                cls()
                 calculator()
     calculator()
 
