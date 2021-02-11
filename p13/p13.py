@@ -9,7 +9,7 @@ def start():
   # p2()
 
 def p0():
-  macro.moduleStart("DEBUGGING")
+  macro.moduleStart("DEBUGGING1")
   # # Describe Problem
   # def my_function():
   #   for i in range(1, 20):
@@ -54,37 +54,24 @@ def p0():
   # mutate([1,2,3,5,8,13])
 
 def p1():
-  macro.moduleStart("")
+  macro.moduleStart("DEBUGGING2")
 
   year = int(input("Which year do you want to check?"))
   if year % 4 == 0:
     if year % 100 == 0:
-      if year % 400 == 0:
-        print("Leap year.")
-      else:
-        print("Not leap year.")
-    else:
-      print("Leap year.")
-  else:
-    print("Not leap year.")
+      if year % 400 == 0: print("Leap year.")
+      else: print("Not leap year.")
+    else: print("Leap year.")
+  else: print("Not leap year.")
 
   number = int(input("Which number do you want to check?"))
-  if number % 2 == 0:
-    print("This is an even number.")
-  else:
-    print("This is an odd number.")
+  if number % 2 == 0: print("This is an even number.")
+  else: print("This is an odd number.")
 
   for number in range(1, 101):
-    if number % 3 == 0 and number % 5 == 0:
-      print("FizzBuzz")
-    elif number % 3 == 0:
-      print("Fizz")
-    elif number % 5 == 0:
-      print("Buzz")
-    else:
-      print(number)
-
-def p2():
-  macro.moduleStart("")
+    if number % 3 == 0 and number % 5 == 0: print("FizzBuzz")
+    elif number % 3 == 0: print("Fizz")
+    elif number % 5 == 0: print("Buzz")
+    else: print(number)
 
 start()
