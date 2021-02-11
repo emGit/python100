@@ -1,4 +1,4 @@
-from util import constants, macro
+from util import macro
 
 def start():
   # p0()
@@ -11,25 +11,25 @@ def start():
 def p0():
   macro.moduleStart("Odd Even")
   number = int(input("Which number do you want to check? "))
-  if number%2==0: print(f"Number: {number} is even.")
+  if number % 2 == 0: print(f"Number: {number} is even.")
   else: print(f"Number: {number} is odd.")
 
 def p1():
   macro.moduleStart("BMI")
   height = float(input("enter your height in m: "))
   weight = float(input("enter your weight in kg: "))
-  bmi = round(weight/height**2)
-  if bmi<18.5: print(f"Your BMI is {bmi}, you are underweight.")
-  elif bmi<25: print(f"Your BMI is {bmi}, you have a normal weight.")
-  elif bmi<30: print(f"Your BMI is {bmi}, you overweight.")
-  elif bmi<35: print(f"Your BMI is {bmi}, you are obese.")
+  bmi = round(weight / height**2)
+  if bmi < 18.5: print(f"Your BMI is {bmi}, you are underweight.")
+  elif bmi < 25: print(f"Your BMI is {bmi}, you have a normal weight.")
+  elif bmi < 30: print(f"Your BMI is {bmi}, you overweight.")
+  elif bmi < 35: print(f"Your BMI is {bmi}, you are obese.")
   else: print(f"Your BMI is {bmi}, you are clinically obese.")
 
 def p2():
   macro.moduleStart("Leap Year")
   year = int(input("Which year do you want to check? "))
-  if year%4==0&year%100!=0: print("Leap")
-  elif year%4==0&year%100==0&year%400==0: print("Leap")
+  if year % 4 == 0 & year % 100 != 0: print("Leap")
+  elif year % 4 == 0 & year % 100 == 0 & year % 400 == 0: print("Leap")
   else: print("Not Leap")
 
 def p3():
@@ -37,21 +37,21 @@ def p3():
   print("Welcome to the rollercoaster!")
   height = int(input("What is your height in cm? "))
   bill = 0
-  if height>=120:
+  if height >= 120:
     print("You can ride the rollercoaster!")
     age = int(input("What is your age? "))
-    if age<12:
+    if age < 12:
       bill = 5
       print("Child tickets are $5.")
-    elif age<=18:
+    elif age <= 18:
       bill = 7
       print("Youth tickets are $7.")
-    elif 45<=age<=55: print("Everything is going to be ok. Have a free ride on us!")
+    elif 45 <= age <= 55: print("Everything is going to be ok. Have a free ride on us!")
     else:
       bill = 12
       print("Adult tickets are $12.")
     wantsPhoto = input("Do you want a photo taken? Y or N. ")
-    if wantsPhoto=="Y": bill += 3
+    if wantsPhoto == "Y": bill += 3
     print(f"Your final bill is ${bill}")
   else: print("Sorry, you have to grow taller before you can ride.")
 
@@ -63,15 +63,15 @@ def p4():
   extraCheese = input("Do you want extra cheese? Y or N ")
 
   bill = 0
-  if size=="S": bill += 15
-  elif size=="M": bill += 20
+  if size == "S": bill += 15
+  elif size == "M": bill += 20
   else: bill += 25
 
-  if addPepperoni=="Y":
-    if size=="S": bill += 2
+  if addPepperoni == "Y":
+    if size == "S": bill += 2
     else: bill += 3
 
-  if extraCheese=="Y": bill += 1
+  if extraCheese == "Y": bill += 1
   print(f"Your bill is: ${bill}")
 
 def p5():
@@ -79,20 +79,20 @@ def p5():
   print("Welcome to the Love Calculator!")
   name1 = input("What is your name? \n")
   name2 = input("What is their name? \n")
-  combined = (name1+name2).lower()
+  combined = (name1 + name2).lower()
   t = combined.count("t")
   r = combined.count("r")
   u = combined.count("u")
   e = combined.count("e")
-  true = t+r+u+e
+  true = t + r + u + e
   l = combined.count("l")
   o = combined.count("o")
   v = combined.count("v")
   e = combined.count("e")
-  love = l+o+v+e
-  score = int(str(true)+str(love))
-  if score<10 or score>90: print(f"Your score is {score}, you go together like coke and mentos.")
-  elif score>=40 or score<=50: print(f"Your score is {score}, you are alright together.")
+  love = l + o + v + e
+  score = int(str(true) + str(love))
+  if score < 10 or score > 90: print(f"Your score is {score}, you go together like coke and mentos.")
+  elif score >= 40 or score <= 50: print(f"Your score is {score}, you are alright together.")
   else: print(f"Your score is {score}!")
 
 def p6():
@@ -122,15 +122,15 @@ def p6():
   print("Welcome to Treasure Island.")
   print("Your mission is to find the treasure.")
   choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
-  if choice1=="left":
+  if choice1 == "left":
     choice2 = input(
       'You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
-    if choice2=="wait":
+    if choice2 == "wait":
       choice3 = input(
         "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n").lower()
-      if choice3=="red": print("It's a room full of fire. Game Over.")
-      elif choice3=="yellow": print("You found the treasure! You Win!")
-      elif choice3=="blue": print("You enter a room of beasts. Game Over.")
+      if choice3 == "red": print("It's a room full of fire. Game Over.")
+      elif choice3 == "yellow": print("You found the treasure! You Win!")
+      elif choice3 == "blue": print("You enter a room of beasts. Game Over.")
       else: print("You chose a door that doesn't exist. Game Over.")
     else: print("You get attacked by an angry trout. Game Over.")
   else: print("You fell into a hole. Game Over.")

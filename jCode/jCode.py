@@ -20,7 +20,7 @@ def p0():
 
   pets = input('\nDo you have any pets? \n')
 
-  if (pets=="yes" or pets=="Yes"):
+  if (pets == "yes" or pets == "Yes"):
     pet_name = input("\nWhat is your pet's name?\n")
   else:
     print("\nAh, I see.")

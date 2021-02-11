@@ -1,4 +1,4 @@
-from util import constants, macro
+from util import macro
 
 def start():
   # p0()
@@ -13,7 +13,7 @@ def p0():
   fruits = ["Apple", "Peach", "Pear"]
   for i in fruits:
     print(i)
-    print(i+" Pie")
+    print(i + " Pie")
   print(fruits)
 
 # noinspection PyTypeChecker,PyUnboundLocalVariable
@@ -25,7 +25,7 @@ def p1():
   for i in heights: sum += i
   len = 0
   for _ in heights: len += 1
-  print(f"Average height is {int(sum/len)}")
+  print(f"Average height is {int(sum / len)}")
 
 # noinspection PyTypeChecker,PyUnboundLocalVariable
 def p2():
@@ -34,7 +34,7 @@ def p2():
   highest = -1
   for i in range(0, len(scores)): scores[i] = int(scores[i])
   for i in scores:
-    if i>highest: highest = i
+    if i > highest: highest = i
   print(f"The highest score is {highest}")
 
 def p3():
@@ -49,9 +49,9 @@ def p3():
 def p4():
   macro.moduleStart("FizzBuzz")
   for number in range(1, 100):
-    if number%3 and number%5==0: print("FizzBuzz")
-    elif number%3==0: print("Fizz")
-    elif number%5==0: print("Buzz")
+    if number % 3 and number % 5 == 0: print("FizzBuzz")
+    elif number % 3 == 0: print("Fizz")
+    elif number % 5 == 0: print("Buzz")
     else: print(number)
 
 def p5():
@@ -79,9 +79,9 @@ def p5():
 
   #Hard Level
   password_list = []
-  for char in range(1, nr_letters+1): password_list.append(random.choice(letters))
-  for char in range(1, nr_symbols+1): password_list += random.choice(symbols)
-  for char in range(1, nr_numbers+1): password_list += random.choice(numbers)
+  for char in range(1, nr_letters + 1): password_list.append(random.choice(letters))
+  for char in range(1, nr_symbols + 1): password_list += random.choice(symbols)
+  for char in range(1, nr_numbers + 1): password_list += random.choice(numbers)
   print(password_list)
 
   random.shuffle(password_list)

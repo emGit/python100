@@ -20,8 +20,8 @@ def p1():
 
   def paint_calc(height, width, cover):
     import math
-    area = height*width
-    cans = math.ceil(area/cover)
+    area = height * width
+    cans = math.ceil(area / cover)
     print(f"You'll need {cans} cans of paint.")
 
   test_h = int(input("Height of wall: "))
@@ -34,7 +34,7 @@ def p2():
 
   def prime_checker(number):
     for i in range(2, number):
-      if number%i==0:
+      if number % i == 0:
         print("Number is Not Prime")
         return
     print("Number is Prime")
@@ -63,20 +63,20 @@ def p3():
   def encrypt(text, shift):
     encrypted_text = ""
     for i in text:
-      shifted_index = alphabet.index(i)+shift
-      if shifted_index>25: encrypted_text += alphabet[shifted_index-26]
+      shifted_index = alphabet.index(i) + shift
+      if shifted_index > 25: encrypted_text += alphabet[shifted_index - 26]
       else: encrypted_text += alphabet[shifted_index]
     print(encrypted_text)
 
   def decrypt(text, shift):
     decrypted_text = ""
     for i in text:
-      shifted_index = alphabet.index(i)-shift
-      if shifted_index<0: decrypted_text += alphabet[shifted_index+26]
+      shifted_index = alphabet.index(i) - shift
+      if shifted_index < 0: decrypted_text += alphabet[shifted_index + 26]
       else: decrypted_text += alphabet[shifted_index]
     print(decrypted_text)
 
-  if direction=="encode": encrypt(text, shift)
+  if direction == "encode": encrypt(text, shift)
   else: decrypt(text, shift)
 
 def p4():
@@ -85,14 +85,14 @@ def p4():
 
   def caesar(start_text, shift_amount, cipher_direction):
     end_text = ""
-    if cipher_direction=="decode": shift_amount *= -1
+    if cipher_direction == "decode": shift_amount *= -1
     for char in start_text:
       #TODO-3: What happens if the user enters a number/symbol/space?
       #Can you fix the code to keep the number/symbol/space when the text is encoded/decoded?
       #e.g. start_text = "meet me at 3"
       #end_text = "•••• •• •• 3"
       if char in alphabet:
-        new_position = alphabet.index(char)+shift_amount
+        new_position = alphabet.index(char) + shift_amount
         end_text += alphabet[new_position]
       else: end_text += char
     print(f"Here's the {cipher_direction}d result: {end_text}")
@@ -114,10 +114,10 @@ def p4():
     #Try running the program and entering a shift number of 45.
     #Add some code so that the program continues to work even if the user enters a shift number greater than 26.
     #Hint: Think about how you can use the modulus (%).
-    shift = shift%26
+    shift = shift % 26
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
     restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
-    if restart=="no":
+    if restart == "no":
       should_end = True
       print("Goodbye")
 

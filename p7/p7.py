@@ -1,6 +1,8 @@
-from util import constants, macro
 import random
-import hangman_art, hangman_words
+
+import hangman_art
+import hangman_words
+from util import macro
 
 def start():
   # p0()
@@ -15,7 +17,7 @@ def p0():
   chosen_word = random.choice(word_list)
   guess = input("Choose a letter: ").lower()
   for i in chosen_word:
-    if i==guess: print("Right")
+    if i == guess: print("Right")
     else: print("Wrong")
 
 def p1():
@@ -28,7 +30,7 @@ def p1():
   for _ in range(word_length): display += "_"
   guess = input("Choose a letter: ").lower()
   for i in range(word_length):
-    if chosen_word[i]==guess: display[i] = guess
+    if chosen_word[i] == guess: display[i] = guess
   print(display)
 
 def p2():
@@ -43,7 +45,7 @@ def p2():
   while '_' in display:
     guess = input("Choose a letter: ").lower()
     for i in range(word_length):
-      if chosen_word[i]==guess: display[i] = guess
+      if chosen_word[i] == guess: display[i] = guess
     print(display)
   print("You win!")
 
@@ -62,13 +64,13 @@ def p3():
     guess = input("Choose a letter: ").lower()
     if guess not in chosen_word:
       lives -= 1
-      if lives==0:
+      if lives == 0:
         print(hangman_art.stages[lives])
         print(display)
         print("You lose!")
         exit()
     for i in range(word_length):
-      if chosen_word[i]==guess: display[i] = guess
+      if chosen_word[i] == guess: display[i] = guess
     print(hangman_art.stages[lives])
     print(display)
     print(f"{''.join(display)}")
@@ -93,13 +95,13 @@ def p4():
     if guess not in chosen_word:
       lives -= 1
       print(f"You chose a letter not in the word.! You lose a life.")
-      if lives==0:
+      if lives == 0:
         print(hangman_art.stages[lives])
         print(display)
         print("You lose!")
         exit()
     for i in range(word_length):
-      if chosen_word[i]==guess: display[i] = guess
+      if chosen_word[i] == guess: display[i] = guess
     print(hangman_art.stages[lives])
     print(display)
   print("You win!")

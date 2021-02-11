@@ -1,4 +1,4 @@
-from util import constants, macro
+from util import macro
 
 #Online Code: Robot Moves
 #https://reeborg.ca

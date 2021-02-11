@@ -51,9 +51,9 @@ def p1():
   #TODO-2: Write your code below to add the grades to student_grades.👇
   for i in student_scores:
     score = student_scores[i]
-    if score>90: student_grades[i] = "Outstanding"
-    elif score>80: student_grades[i] = "Exceeds Expectations"
-    elif score>70: student_grades[i] = "Acceptable"
+    if score > 90: student_grades[i] = "Outstanding"
+    elif score > 80: student_grades[i] = "Exceeds Expectations"
+    elif score > 70: student_grades[i] = "Acceptable"
     else: student_grades[i] = "Fail"
     # 🚨 Don't change the code below 👇
   print(student_grades)
@@ -123,14 +123,14 @@ def p4():
   import art
   print(art.logo)
   bids = {}
-  while input("Any more bids? Type 'yes' or 'no'. ")=="yes":
+  while input("Any more bids? Type 'yes' or 'no'. ") == "yes":
     bids[input("What is your name?: ")] = input("What will you pay?: $")
   else:
     winner = "Null"
     high_bid = 0
     for i in bids:
       new_bid = int(bids[i])
-      if new_bid>high_bid:
+      if new_bid > high_bid:
         winner = i
         high_bid = new_bid
     print(f"The winner is {winner}, with a bid of {high_bid}!")

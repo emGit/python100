@@ -28,8 +28,8 @@ def p1():
   #Swap a and b;
   a = b
   b = c
-  print("a = "+a)
-  print("b = "+b)
+  print("a = " + a)
+  print("b = " + b)
 
 def p2():
   print(constants.space)
@@ -37,4 +37,4 @@ def p2():
   city = input("Which city did you grow up in?\n")
   print(city)
   pet = input("What is the name of a pet?\n")
-  print("Your band name could be "+city+" "+pet)
+  print("Your band name could be " + city + " " + pet)
