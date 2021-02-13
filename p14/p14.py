@@ -9,13 +9,13 @@ import random
 macro.moduleStart("HigherLower")
 
 new_data = []
-a = None
-b = None
-c = None
+a, b, c = None, None, None
+
 def select():
   x = random.choice(new_data)
   new_data.remove(x)
   return x
+
 def swap():
   global a, b, c
   print("Correct!")
