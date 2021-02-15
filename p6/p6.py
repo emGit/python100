@@ -1,20 +1,20 @@
 from util import macro
 
-#Online Code: Robot Moves
-#https://reeborg.ca
+# Online Code: Robot Moves
+# https://reeborg.ca
 def start():
-  p0()
-  # p1()
-  # p2()
+    p0()
+    # p1()
+    # p2()
 
 def p0():
-  macro.moduleStart("Robot Moves")
-  # move() etc
+    macro.moduleStart("Robot Moves")
+    # move() etc
 
 def p1():
-  macro.moduleStart("")
+    macro.moduleStart("")
 
 def p2():
-  macro.moduleStart("")
+    macro.moduleStart("")
 
 start()

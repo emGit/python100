@@ -13,12 +13,12 @@ jCode.start()
 # p3.start()
 
 def notes():
-  #$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-  #$ git clone https://github.com/jprincecode/py100
+    # $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+    # $ git clone https://github.com/jprincecode/py100
 
-  #TODO:
-  #https://github.com/emGit
+    # TODO:
+    # https://github.com/emGit
 
-  print("End!")
+    print("End!")
 
 notes()
