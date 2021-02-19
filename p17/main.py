@@ -1,6 +1,7 @@
+from data import question_data
 from question_model import Question
 from quiz_brain import Brain
-from data import question_data
+
 questions = []
 for i in question_data: questions.append(Question(i["text"], i["answer"]))
 brain = Brain(questions)

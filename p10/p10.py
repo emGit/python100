@@ -43,15 +43,18 @@ def p2():
     from art import logo
     from util.macro import cls
     def add(n1, n2): return n1 + n2
+
     def subtract(n1, n2): return n1 - n2
+
     def multiply(n1, n2): return n1 * n2
+
     def divide(n1, n2): return n1 / n2
 
     operations = {
-        "+": add,
-        "-": subtract,
-        "*": multiply,
-        "/": divide
+        "+":add,
+        "-":subtract,
+        "*":multiply,
+        "/":divide
     }
 
     def calculator():
@@ -74,6 +77,7 @@ def p2():
                 # print(space)
                 cls()
                 calculator()
+
     calculator()
 
 start()

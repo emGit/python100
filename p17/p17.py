@@ -12,7 +12,7 @@ def p0():
     macro.moduleStart("")
     height = float(input("enter your height in m: \n"))
     weight = float(input("enter your weight in kg: \n"))
-    print(f"Your BMI is: {int(weight / height ** 2)}")
+    print(f"Your BMI is: {int(weight / height**2)}")
 
 def p1():
     macro.moduleStart("")

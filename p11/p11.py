@@ -77,6 +77,7 @@ def p0():
         if input("Press 'y' if you would like another card... \n") == 'y': deal_card("player")
         if sum(ai_cards) < 17: deal_card("ai")
         end()
+
     play()
 
 def p1():

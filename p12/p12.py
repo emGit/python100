@@ -11,6 +11,7 @@ def start():
 def p0():
     macro.moduleStart("Scope")
     enemies = 1
+
     def increase_enemies():
         enemies = 2
         print(f"enemies inside function: {enemies}")
@@ -33,7 +34,9 @@ def p0():
         def drink_potion():
             potion_strength = 2
             print(player_health)
+
         drink_potion()
+
     print(player_health)
 
     # There is no Block Scope

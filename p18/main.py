@@ -1,7 +1,9 @@
-import turtle
-from turtle import Turtle, Screen
-import heroes
 import random
+import turtle
+from turtle import Screen, Turtle
+
+import heroes
+
 print(heroes.gen())
 turtle.colormode(255)
 obj = Turtle()

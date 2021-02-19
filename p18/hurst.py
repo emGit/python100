@@ -7,8 +7,9 @@
 #
 # print(rgb_colors)
 
-import turtle as turtle_module
 import random
+import turtle as turtle_module
+
 turtle_module.colormode(255)
 turtle = turtle_module.Turtle()
 turtle.speed("fastest")
