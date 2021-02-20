@@ -1,53 +1,32 @@
-import sys
+from turtle import Turtle, Screen
 
-sys.path.append('../')
-from util import macro
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor(0, 0, 0)
 
-class MenuItem:
-    """Models each Menu Item."""
-
-    def __init__(self, name, water, milk, coffee, cost):
-        self.name = name
-        self.cost = cost
-        self.ingredients = {
-            "water":water,
-            "milk":milk,
-            "coffee":coffee}
-
-class Menu:
-    CURRENCY = "$"
+class Ball(Turtle):
 
     def __init__(self):
-        self.profit = 0
-        self.money_received = 0
-        self.menu = [
-            MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
-            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5)]
+        super().__init__()
+        self.shape("circle")
+        self.color("white")
+        self.penup()
+        self.x_move = 3
+        self.y_move = 3
+        self.move_speed = 0.1
 
-    def report(self): print(f"Money: {self.CURRENCY}{self.profit}")
+    def move(self): self.goto(self.xcor() + self.x_move, self.ycor() + self.y_move)
 
-    def get_items(self):
-        options = ""
-        for item in self.menu: options += f"{item.name}/"
-        return options
+    def bounce_x(self): self.x_move *= -1
 
-menu = Menu()
+    def bounce_y(self): self.y_move *= -1
 
-def start():
-    p0()
-    # p1()
-    # p2()
+ball = Ball()
+game_is_on = True
+while game_is_on:
+    screen.update()
+    ball.move()
+    if ball.ycor() > 280 or ball.ycor() < -280: ball.bounce_y()
+    if ball.xcor() > 280 or ball.xcor() < -280: ball.bounce_x()
 
-def p0():
-    macro.moduleStart("")
-    height = float(input("enter your height in m: \n"))
-    weight = float(input("enter your weight in kg: \n"))
-    print(f"Your BMI is: {int(weight / height**2)}")
-
-def p1():
-    macro.moduleStart("")
-
-def p2():
-    macro.moduleStart("")
-
-start()
+screen.exitonclick()
